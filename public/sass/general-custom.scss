@@ -1,0 +1,154 @@
+@font-face {
+    font-family: mallory;
+    src: url("../Fonts/Mallory-Dfonts.org/Mallory/Mallory\ Book.ttf");
+    src: local('../Fonts/Mallory-Dfonts.org/Mallory/Mallory\ Book')
+        url('../Fonts/Mallory-Dfonts.org/Mallory/Mallory\ Book.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: mallory;
+    src: url("../Fonts/Mallory-Dfonts.org/Mallory/Mallory\ Compact\ Medium.ttf");
+    src: local('../Fonts/Mallory-Dfonts.org/Mallory/Mallory\ Compact\ Medium')
+         url('../Fonts/Mallory-Dfonts.org/Mallory/Mallory\ Compact\ Medium.tff') format('truetype');
+    font-weight: 700;
+}
+
+/*----Color--*/
+$pink: #ff567d;
+$blue: rgb(83, 146, 249);
+$blue-svg: invert(49%) sepia(56%) saturate(2514%) hue-rotate(200deg) brightness(104%) contrast(95%);
+$white: #fff;
+$text-color: #444;
+$text-color-light: #777;
+$fill-text-color-path: rgb(75, 79, 86);
+$fill-blue-color-path: rgb(83, 146, 249);
+
+$box-shadow:                  0 .5rem 1rem rgba(#000, .15);
+$box-shadow-sm:               0 .125rem .25rem rgba(#000, .075);
+$box-shadow-lg:               0 1rem 3rem rgba(#000, .175);
+$box-shadow-inset:            inset 0 1px 2px rgba(#000, .075);
+
+$border-light:                1px solid #dee2e6;
+$border-dark:                 1px solid #c7c7c7;
+
+$hover-bg: rgba(0, 0, 0, 0.03);
+
+$border-radius: 3px;
+$border-radius-lg: 8px;
+$background-color-transparent: rgb(248, 247, 249);
+
+html{
+    font-family: mallory;
+    font-size: 62.5%;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    -ms-box-sizing: inherit;
+    -o-box-sizing: inherit;
+}
+ul{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.title-reset{
+    font-size: inherit;
+    font-weight: 400;
+    margin: 0;
+}
+.btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /*Customize*/
+    padding: 0.8rem 1.2rem;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.2rem;
+    outline: none;
+    cursor: pointer;
+    transition: color 0.15s ease-in-out,
+                background-color 0.15s ease-in-out, 
+                border-color 0.15s ease-in-out, 
+                box-shadow 0.15s ease-in-out;
+}
+/*btn-outline-danger*/
+.btn-outline-primary {
+    color: $blue;
+    border-color: $blue;
+}
+
+.btn-outline-primary:hover {
+    color: $white;
+    background-color: $blue;
+    border-color: $blue;
+}
+
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(68, 71, 224, 0.363);
+}
+
+.btn-outline-primary.disabled, .btn-outline-primary:disabled {
+    color: $blue;
+    background-color: transparent;
+    pointer-events: none;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle {
+    color: $white;
+    background-color: $blue;
+    border-color: $blue;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(68, 71, 224, 0.363);
+}
+
+/* Btn second */
+.btn-outline-second {
+    color: $pink;
+    border-color: $pink;
+}
+
+.btn-outline-second:hover {
+    color: $white;
+    background-color:  $pink;
+    border-color:  $pink;
+}
+
+.btn-outline-second:focus, .btn-outline-second.focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+}
+
+.btn-outline-second.disabled, .btn-outline-second:disabled {
+    color:  $pink;
+    background-color: transparent;
+    pointer-events: none;
+}
+
+.btn-outline-second:not(:disabled):not(.disabled):active, .btn-outline-second:not(:disabled):not(.disabled).active,
+.show > .btn-outline-second.dropdown-toggle {
+    color: $white;
+    background-color:  $pink;
+    border-color:  $pink;
+}
+
+.btn-outline-second:not(:disabled):not(.disabled):active:focus, .btn-outline-second:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-danger.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+}

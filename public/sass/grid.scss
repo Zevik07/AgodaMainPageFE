@@ -1,0 +1,78 @@
+.grid {
+    width: 1400px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+  
+.grid--full {
+    width: 100%;
+}
+  
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+  
+.row-al-center {
+    align-items: center;
+}
+  
+.col, .col-10, .col-10-2, .col-2, .col-8, .col-4, .col-7, .col-5, .col-9, .col-3 {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.col-3 {
+    width: 25%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-5 {
+    width: 41.16666%;
+}
+.col-7 {
+    width: 58.33333%;
+}
+.col-4 {
+    width: 33.3333%;
+}
+.col-8 {
+    width: 66.66667%;
+}
+.col-2 {
+    width: 16.6667%;
+}
+.col-10-2 {
+    width: 20%;
+}
+.col-10 {
+    width: 83.3333%;
+}
+  
+/*Margin top 10px*/
+.mt-10 {
+    margin-top: 10px;
+}
+  
+.mt-20 {
+    margin-top: 20px;
+}
+  
+.mb-20 {
+    margin-bottom: 20px;
+}
+  
+.mt-24 {
+    margin-top: 24px;
+}
+  
+/*Padding top 10px*/
+.pt-20 {
+    padding-top: 20px;
+}
+  
+.p-25 {
+    padding: 25px;
+}

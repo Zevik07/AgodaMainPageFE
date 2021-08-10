@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agoda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./public/css/main.css">
+</head>
+<body>
+    <div class="webapp">
+        <div class="header">
+            <nav class="nav">
+                <div class="logo-box">
+                    <img src="./public/picture/logo.svg" alt="" class="main-logo">
+                </div>
+                <ul class="nav__list">
+                    <li class="nav-list__item">
+                        <a class="nav-list__link" href="#">
+                            Flight + Hotel
+                        </a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a class="nav-list__link" href="#">
+                            Hotels & Homes
+                        </a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a class="nav-list__link" href="#">
+                           Flights
+                        </a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a class="nav-list__link" href="#">
+                            <svg width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="sc-bqyKva eJRIwi"><path fill-rule="evenodd" d="M12 2c5.523 0 10 4.477 10 10 0 5.43-4.327 9.848-9.72 9.996L12 22a10 10 0 0 1-9-5.637l-.08-.169A9.963 9.963 0 0 1 2 12C2 6.477 6.477 2 12 2zm-.5 12h-3v4h3v-4zm4 0h-3v4h3v-4zm-4-5c-1.624.274-2.84 1.632-2.985 3.272l-.012.19L8.5 13h3V9zm1 0v4h3v-.508l-.01-.193c-.129-1.593-1.265-2.917-2.796-3.261L12.5 9zM12 3.5a8.5 8.5 0 0 0-8.485 9.014L12 4.5l8.485 8.013A8.5 8.5 0 0 0 12 3.5z"></path></svg>
+                            Apartments
+                        </a>
+                    </li>
+                </ul>
+                <div class="nav__ellipsis">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,10a2,2,0,1,0,2,2A2,2,0,0,0,12,10ZM5,10a2,2,0,1,0,2,2A2,2,0,0,0,5,10Zm14,0a2,2,0,1,0,2,2A2,2,0,0,0,19,10Z"/></svg> 
+                    <ul class="nav-ellipsis__list">
+                        <li class="nav-ellipsis__item">Airport transfer</li>
+                        <li class="nav-ellipsis__item">Car rentals</li>
+                        <li class="nav-ellipsis__item">Things to do</li>  
+                    </ul>
+                </div>
+                <ul class="nav__btn-group">
+                    <li class="nav-btn-group__item">
+                        <button class="btn btn-outline-second">
+                            List your place
+                        </button>
+                    </li>
+                    <li class="nav-btn-group__item">
+                        <div class="select-language">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480"><defs><clipPath id="a"><path fill-opacity=".67" d="M-85.334 0h682.67v512h-682.67z"/></clipPath></defs><g fill-rule="evenodd" clip-path="url(#a)" transform="translate(80.001) scale(.9375)"><path fill="#ec0015" d="M-128 0h768v512h-768z"/><path fill="#ff0" d="M349.59 381.05l-89.576-66.893-89.137 67.55 33.152-109.77-88.973-67.784 110.08-.945 34.142-109.44 34.873 109.19 110.08.144-88.517 68.423 33.884 109.53z"/></g></svg>
+                            đ
+                        </div>
+                    </li>
+                    <li class="nav-btn-group__item">
+                        <button class="btn btn-outline-primary btn-sigin">
+                            Sign in
+                        </button>
+                    </li>
+                    <li class="nav-btn-group__item">
+                        <button class="btn btn-outline-primary">
+                            Create account
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            <div class="special-notification">
+                <span class="special-notification__text">
+                    We know your travel plans may be impacted by COVID-19. Check local travel restrictions prior to booking your trip. 
+                </span>
+                <a class="special-notification__link">
+                    Learn more
+                </a>
+            </div>
+            <div class="search-box">
+                <div class="search-box__background">
+                </div>
+                <div class="search-box__content">
+                    <div class="welcome-msg">
+                        <h1 class="welcome-msg__title title-reset">HOTELS, RESORTS, HOSTELS & MORE</h1>
+                        <h2 class="welcome-msg__description title-reset">Get the best prices on 2,000,000+ properties, worldwide</h2>
+                    </div>
+                    <nav class="switch-box">
+                        <ul class="switch-list">
+                            <li class="switch-item active">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="sc-bqyKva dWvdqL"><path fill-rule="evenodd" d="M7 2.18a1 1 0 0 1 .164.014l10 1.667a1 1 0 0 1 .836.986V11L21 11a1 1 0 0 1 1 1v10h-8v-5a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v5H6V3.18a1 1 0 0 1 1-1zM5 10v12H2V11a1 1 0 0 1 1-1h2zm16 7h-3v1h3v-1zm0-3h-3v1h3v-1zm-9.5-4H9v2.5h1.01V11h1.49v-1zm4 0H13v2.5h1.01V11h1.49v-1zm-4-4H9v2.5h1.01V7h1.49V6zm4 0H13v2.5h1.01V7h1.49V6z"></path></svg>
+                                <h6 class="switch-item__title">Hotels & Homes</h6>
+                            </li>
+                            <li class="switch-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="sc-bqyKva eJRIwi"><path fill-rule="evenodd" d="M12 2c5.523 0 10 4.477 10 10 0 5.43-4.327 9.848-9.72 9.996L12 22a10 10 0 0 1-9-5.637l-.08-.169A9.963 9.963 0 0 1 2 12C2 6.477 6.477 2 12 2zm-.5 12h-3v4h3v-4zm4 0h-3v4h3v-4zm-4-5c-1.624.274-2.84 1.632-2.985 3.272l-.012.19L8.5 13h3V9zm1 0v4h3v-.508l-.01-.193c-.129-1.593-1.265-2.917-2.796-3.261L12.5 9zM12 3.5a8.5 8.5 0 0 0-8.485 9.014L12 4.5l8.485 8.013A8.5 8.5 0 0 0 12 3.5z"></path></svg>
+                                <h6 class="switch-item__title">Private stays</h6>
+                            </li>
+                            <li class="switch-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="sc-bqyKva eJRIwi"><path fill-rule="evenodd" d="M10 13v9.023H2V14a1 1 0 0 1 1-1h7zm11.5-3a.5.5 0 0 1 .5.5V22H11V10.5a.5.5 0 0 1 .5-.5h10zM8 18H4v1h4v-1zm8-2h-2v2h1.01v-1H16v-1zm3 0h-2v2h1.01v-1H19v-1zM8 15H4v.954h4V15zm8-2h-2v2h1.01v-1H16v-1zm3 0h-2v2h1.01v-1H19v-1zM8.127 1.301a2 2 0 0 1 1.61.106l4.94 2.576 3.726-1.357a1.19 1.19 0 1 1 .814 2.236L8.473 8.772a2 2 0 0 1-2.25-.635L4 5.337l.485-.177a2 2 0 0 1 1.868.267l1.442 1.06L10.95 5.34 7.085 1.681z"></path></svg>
+                                <h6 class="switch-item__title">Flight + Hotel</h6>
+                            </li>
+                            <li class="switch-item">
+                                <svg width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="sc-bqyKva eJRIwi"><path fill-rule="evenodd" d="M4.775 4.604L3 6.379l8.408 4.02-3.827 3.826-2.15-.704a1.034 1.034 0 0 0-1.053.252l-1.28 1.281 3.557 2.29 2.291 3.56 1.281-1.283c.276-.275.373-.682.252-1.052l-.704-2.15 3.826-3.826L17.62 21l1.776-1.776c.26-.258.362-.636.27-.99l-2.411-9.298 3.29-3.29a1.551 1.551 0 0 0-2.193-2.193l-3.29 3.29-9.297-2.41a1.035 1.035 0 0 0-.99.27"></path></svg>
+                                <h6 class="switch-item__title">Flights</h6>
+                            </li>
+                            <li class="switch-item">
+                                <svg width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="sc-bqyKva eJRIwi"><path fill-rule="evenodd" d="M8.5 1a.5.5 0 0 1 .5.5V3h6V1.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5V3h3a2 2 0 0 1 2 2v5h-2V7H4v12a1 1 0 0 0 .883.993L5 20h14a1 1 0 0 0 .993-.883L20 19v-2h2v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3V1.5a.5.5 0 0 1 .5-.5h1zm5.5 9a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-5a1 1 0 0 1 1-1h2zm-5.5 0a1.5 1.5 0 0 1 1.493 1.356L10 11.5v1c0 .385-.145.736-.383 1.001.208.23.345.527.376.855L10 14.5v1a1.5 1.5 0 0 1-1.356 1.493L8.5 17h-2a.5.5 0 0 1-.09-.992L6.5 16h2a.5.5 0 0 0 .492-.41L9 15.5v-1a.5.5 0 0 0-.41-.492L8.5 14h-2a.5.5 0 0 1-.09-.992L6.5 13h2a.5.5 0 0 0 .492-.41L9 12.5v-1a.5.5 0 0 0-.41-.492L8.5 11h-2a.5.5 0 0 1-.09-.992L6.5 10h2zm10 1a.5.5 0 0 1 .5.5V13h1.5a.5.5 0 0 1 .09.992L20.5 14H19v1.5a.5.5 0 0 1-.41.492L18.5 16a.5.5 0 0 1-.5-.5V14h-1.5a.5.5 0 1 1 0-1H18v-1.5a.5.5 0 0 1 .5-.5zM14 11h-2v5h2v-5z"></path></svg>
+                                <h6 class="switch-item__title">Monthly stays</h6>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="search-box__main">
+                        <div class="search-box__inputbox">
+                            <img class="icon-search-box" src="./public/picture/system/search.JPG" alt="">
+                            <input type="text" placeholder="Enter a destination or property">
+                        </div>
+                        <div class="search-box__options">
+                            <div class="date-option">
+                                <div class="date-option__item">
+                                    <img class="icon-search-box" src="./public/picture/system/callender.JPG" alt="">
+                                    <div class="option-body">
+                                        <h6 class="text title-reset">16 Aug 2021</h6>
+                                        <p class="textsub title-reset">Monday</p>
+                                    </div>  
+                                </div>
+                                <div class="date-option__item">
+                                    <img class="icon-search-box" src="./public/picture/system/callender.JPG" alt="">    
+                                    <div class="option-body">
+                                        <h6 class="text title-reset">16 Aug 2021</h6>
+                                        <p class="textsub title-reset">Monday</p>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="room-option">
+                                <div class="room-option__item">
+                                    <img class="icon-search-box" src="./public/picture/system/people.JPG" alt="">    
+                                    <div class="option-body">
+                                        <h6 class="text title-reset">1 Adult</h6>
+                                        <p class="textsub title-reset">1 room</p>
+                                    </div>  
+                                    <img class="icon-search-box dropdown" src="./public/picture/system/drop-down.JPG" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search-box__submitbox">
+                            <button class="search-box-submitbox__btn btn btn-outline-primary">
+                                SEARCH
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="body">>
+            <div class="top-destination">
+                <h3 class="title-reset body-title">
+                    Top destinations in Vietnam
+                </h3>
+                <div class="top-destination__body">
+                    <ul class="top-destination__list">
+                        <li class="top-destination__item">
+                            <a href="#" class="top-destination__link">
+                                <img src="./public/picture/hanoi.jpg" alt="">
+                                <h6 class="title-reset top-destination-link__title">Hanoi</h6>
+                                <span class="title-reset top-destination-link__description">6,669 accommodations</span>
+                            </a>
+                        </li>
+                        <li class="top-destination__item">
+                            <a href="#" class="top-destination__link">
+                                <img src="./public/picture/saigon.jpg" alt="">
+                                <h6 class="title-reset top-destination-link__title">Ho Chi Minh City</h6>
+                                <span class="title-reset top-destination-link__description">9,901 accommodations</span>
+                            </a>
+                        </li>
+                        <li class="top-destination__item">
+                            <a href="#" class="top-destination__link">
+                                <img src="./public/picture/nhatrang.jpg" alt="">
+                                <h6 class="title-reset top-destination-link__title">Nha Trang</h6>
+                                <span class="title-reset top-destination-link__description">2,781 accommodations</span>
+                            </a>
+                        </li>
+                        <li class="top-destination__item">
+                            <a href="#" class="top-destination__link">
+                                <img src="./public/picture/dangnang.jpg" alt="">
+                                <h6 class="title-reset top-destination-link__title">Da Nang</h6>
+                                <span class="title-reset top-destination-link__description">4,094 accommodations</span>
+                            </a>
+                        </li>
+                        <li class="top-destination__item">
+                            <a href="#" class="top-destination__link">
+                                <img src="./public/picture/phuquoc.jpg" alt="">
+                                <h6 class="title-reset top-destination-link__title">Phu Quoc Island</h6>
+                                <span class="title-reset top-destination-link__description">1,048 accommodations</span>
+                            </a>
+                        </li>
+                        <li class="top-destination__item">
+                            <a href="#" class="top-destination__link">
+                                <img src="./public/picture/hoian.jpg" alt="">
+                                <h6 class="title-reset top-destination-link__title">Hoi An</h6>
+                                <span class="title-reset top-destination-link__description">1,442 accommodations</span>
+                            </a>
+                        </li>
+                        <li class="top-destination__item">
+                            <a href="#" class="top-destination__link">
+                                <img src="./public/picture/dalat.jpg" alt="">
+                                <h6 class="title-reset top-destination-link__title">Dalat</h6>
+                                <span class="title-reset top-destination-link__description">3,206 accommodations</span>
+                            </a>
+                        </li>
+                        <li class="top-destination__item">
+                            <a href="#" class="top-destination__link">
+                                <img src="./public/picture/vungtau.jpg" alt="">
+                                <h6 class="title-reset top-destination-link__title">Vung Tau</h6>
+                                <span class="title-reset top-destination-link__description">3,071 accommodations</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="top-destination-manager">
+                        <div class="top-destination-manager__prev">
+                            <svg height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="sc-bqyKva ijvAbc"><path d="M8.515 12l9.192 9.192a1 1 0 1 1-1.414 1.415l-9.9-9.9a1 1 0 0 1 0-1.414l9.9-9.9a1 1 0 0 1 1.414 1.415L8.515 12z"></path></svg>
+                        </div>
+                        <div class="top-destination-manager__next">
+                            <svg height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="sc-bqyKva ijvAbc"><path d="M15.485 12L6.293 2.808a1 1 0 0 1 1.414-1.415l9.9 9.9a1 1 0 0 1 0 1.414l-9.9 9.9a1 1 0 0 1-1.414-1.415L15.485 12z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-vacation">
+                <h3 class="title-reset body-title top-vacation__title">
+                    Explore more travel vacation rentals
+                </h3>
+                <ul class="top-vacation__list">
+                    <li class="top-vacation__item">
+                        <a href="" class="top-vacation__link">
+                            <img src="./public/picture/apartment.jpg" alt="">
+                            <div class="top-vacation-link__content">
+                                <h6 class="top-vacation-link__title title-reset">Apartments</h6>
+                                <p class="top-vacation-link__description">156,786 properties</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="top-vacation__item">
+                        <a href="" class="top-vacation__link">
+                            <img src="./public/picture/vacation.jpg" alt="">
+                            <div class="top-vacation-link__content">
+                                <h6 class="top-vacation-link__title title-reset">Vacation Rentals</h6>
+                                <p class="top-vacation-link__description">517,703 properties</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="top-vacation__item">
+                        <a href="" class="top-vacation__link">
+                            <img src="./public/picture/entire-villa.jpg" alt="">
+                            <div class="top-vacation-link__content">
+                                <h6 class="top-vacation-link__title title-reset">Private Villas</h6>
+                                <p class="top-vacation-link__description">181,167 properties</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="top-vacation__item">
+                        <a href="" class="top-vacation__link">
+                            <img src="./public/picture/entire-bungalow.jpg" alt="">
+                            <div class="top-vacation-link__content">
+                                <h6 class="top-vacation-link__title title-reset">Bungalows</h6>
+                                <p class="top-vacation-link__description">8,801 properties</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="top-recommend">
+                <h3 class="title-reset body-title top-recommend__title">
+                    Featured homes recommended for you
+                </h3>
+                <ul class="top-recommend__nav">
+                    <li class="top-recommend-nav__item active">Hanoi</li>
+                    <li class="top-recommend-nav__item">Ho Chi Minh City</li>
+                    <li class="top-recommend-nav__item">Nha Trang</li>
+                    <li class="top-recommend-nav__item">Da Nang</li>
+                    <li class="top-recommend-nav__item">Phu Quoc Island</li>
+                </ul>
+                <ul class="top-recommend__list row">
+                    <li class="top-recommend-list__item col-3">
+                        <a href="#" class="recommend-link">
+                            <img src="./public/picture/home.jpg" alt="" class="recommend-link__img">
+                            <h6 class="recommend-link__title title-reset">A-Homes Green Bay Luxury Apartment 1.3</h6>
+                            <span class="recommend-link__star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <p class="recommend-link__address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="">
+                                    Quan Cau Giay, Ha Noi
+                                </span>
+                            </p>
+                            <div class="recommend-link__status">
+                                <span class="">Price per night as low as</span>
+                            </div>
+                            <div class="recommend-link__price">
+                                <span class="">VND 478,595</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="top-recommend-list__item col-3">
+                        <a href="#" class="recommend-link">
+                            <img src="./public/picture/home2.jpg" alt="" class="recommend-link__img">
+                            <h6 class="recommend-link__title title-reset">A-Homes Green Bay Luxury Apartment 1.3</h6>
+                            <span class="recommend-link__star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <p class="recommend-link__address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="">
+                                    Quan Cau Giay, Ha Noi
+                                </span>
+                            </p>
+                            <div class="recommend-link__status">
+                                <span class="">Price per night as low as</span>
+                            </div>
+                            <div class="recommend-link__price">
+                                <span class="">VND 478,595</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="top-recommend-list__item col-3">
+                        <a href="#" class="recommend-link">
+                            <img src="./public/picture/home3.jpg" alt="" class="recommend-link__img">
+                            <h6 class="recommend-link__title title-reset">A-Homes Green Bay Luxury Apartment 1.3</h6>
+                            <span class="recommend-link__star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <p class="recommend-link__address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="">
+                                    Quan Cau Giay, Ha Noi
+                                </span>
+                            </p>
+                            <div class="recommend-link__status">
+                                <span class="">Price per night as low as</span>
+                            </div>
+                            <div class="recommend-link__price">
+                                <span class="">VND 478,595</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="top-recommend-list__item col-3">
+                        <a href="#" class="recommend-link">
+                            <img src="./public/picture/home4.jpg" alt="" class="recommend-link__img">
+                            <h6 class="recommend-link__title title-reset">A-Homes Green Bay Luxury Apartment 1.3</h6>
+                            <span class="recommend-link__star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <p class="recommend-link__address">
+                                <i class="fas fa-map-marker-alt"> </i>
+                                <span class="">
+                                    Quan Cau Giay, Ha Noi
+                                </span>
+                            </p>
+                            <div class="recommend-link__status">
+                                <span class="">Price per night as low as</span>
+                            </div>
+                            <div class="recommend-link__price">
+                                <span class="">VND 478,595</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="top-recommend-list__item col-3">
+                        <a href="#" class="recommend-link">
+                            <img src="./public/picture/home4.jpg" alt="" class="recommend-link__img">
+                            <h6 class="recommend-link__title title-reset">A-Homes Green Bay Luxury Apartment 1.3</h6>
+                            <span class="recommend-link__star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <p class="recommend-link__address">
+                                <i class="fas fa-map-marker-alt"> </i>
+                                <span class="">
+                                    Quan Cau Giay, Ha Noi
+                                </span>
+                            </p>
+                            <div class="recommend-link__status">
+                                <span class="">Price per night as low as</span>
+                            </div>
+                            <div class="recommend-link__price">
+                                <span class="">VND 478,595</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="top-recommend-list__item col-3">
+                        <a href="#" class="recommend-link">
+                            <img src="./public/picture/home4.jpg" alt="" class="recommend-link__img">
+                            <h6 class="recommend-link__title title-reset">A-Homes Green Bay Luxury Apartment 1.3</h6>
+                            <span class="recommend-link__star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <p class="recommend-link__address">
+                                <i class="fas fa-map-marker-alt"> </i>
+                                <span class="">
+                                    Quan Cau Giay, Ha Noi
+                                </span>
+                            </p>
+                            <div class="recommend-link__status">
+                                <span class="">Price per night as low as</span>
+                            </div>
+                            <div class="recommend-link__price">
+                                <span class="">VND 478,595</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="top-recommend__more">
+                    <button class="top-feedback-more__button btn btn-outline-primary">
+                        See more(Hanoi) properties
+                    </button>
+                </div>
+            </div>
+            <div class="top-feedback">
+                <h1 class="top-feedback__title title-reset">Overheard from travelers</h1>
+                <ul class="row top-feedback__list">
+                    <li class="col-4 top-feedback-list__item">
+                        <h3 class="top-feedback-list__title title-reset">
+                            Novotel Rotorua Lakeside Hotel
+                        </h3>
+                        <h4 class="top-feedback-list__address">
+                            in New Zealand
+                        </h4>
+                        <p class="top-feedback-list__comment">
+                            "Started with stress, ended with joy. Thanks Agoda."
+                        </p>
+                        <h5 class="top-feedback-list__author">
+                            - Michael from Australia
+                        </h5>
+                    </li>
+                    <li class="col-4 top-feedback-list__item">
+                        <h3 class="top-feedback-list__title title-reset">
+                            Hotel Equatorial Melaka
+                        </h3>
+                        <h4 class="top-feedback-list__address">
+                            in Malaysia
+                        </h4>
+                        <p class="top-feedback-list__comment">
+                            "We were travelling with an infant and stated that in our Agoda special requests section when booking. The staff were exceptional in ensuring we had a splendid stay. Highly recommended!"
+                        </p>
+                        <h5 class="top-feedback-list__author">
+                            - Raja from Malaysia
+                        </h5>
+                    </li>
+                    <li class="col-4 top-feedback-list__item">
+                        <h3 class="top-feedback-list__title title-reset">
+                            Heritage Hotel
+                        </h3>
+                        <h4 class="top-feedback-list__address">
+                            in the Philippines
+                        </h4>
+                        <p class="top-feedback-list__comment">
+                            "We got a great last minute rate with Agoda and this room was spacious with a comfortable and warm bed."
+                        </p>
+                        <h5 class="top-feedback-list__author">
+                            - Henry from Australia
+                        </h5>
+                    </li>
+                </ul>
+            </div>
+            <div class="top-destination">
+                <h3 class="title-reset body-title">
+                    Top destinations outside Vietnam
+                </h3>
+                <div class="top-destination__body">
+                    <ul class="top-destination__list">
+                        <li class="top-destination__item">
+                            <a href="#" class="top-destination__link">
+                                <img src="./public/picture/lasvegas.jpg" alt="">
+                                <h6 class="title-reset top-destination-link__title">Las Vegas (NV)</h6>
+                                <span class="title-reset top-destination-link__description">736 accommodations</span>
+                            </a>
+                        </li>
+                        <li class="top-destination__item">
+                            <a href="#" class="top-destination__link">
+                                <img src="./public/picture/losangeles.jpg" alt="">
+                                <h6 class="title-reset top-destination-link__title">Los Angeles</h6>
+                                <span class="title-reset top-destination-link__description">3,015 accommodations</span>
+                            </a>
+                        </li>
+                        <li class="top-destination__item">
+                            <a href="#" class="top-destination__link">
+                                <img src="./public/picture/orlando.jpg" alt="">
+                                <h6 class="title-reset top-destination-link__title">Orlando (FL)</h6>
+                                <span class="title-reset top-destination-link__description">10,622 accommodations</span>
+                            </a>
+                        </li>
+                        <li class="top-destination__item">
+                            <a href="#" class="top-destination__link">
+                                <img src="./public/picture/dangnang.jpg" alt="">
+                                <h6 class="title-reset top-destination-link__title">Dalas (TX)</h6>
+                                <span class="title-reset top-destination-link__description">1,343 accommodations</span>
+                            </a>
+                        </li>
+                        <li class="top-destination__item">
+                            <a href="#" class="top-destination__link">
+                                <img src="./public/picture/chicago.jpg" alt="">
+                                <h6 class="title-reset top-destination-link__title">Chicago (IL)</h6>
+                                <span class="title-reset top-destination-link__description">939 accommodations</span>
+                            </a>
+                        </li>
+                        <li class="top-destination__item">
+                            <a href="#" class="top-destination__link">
+                                <img src="./public/picture/newyork.jpg" alt="">
+                                <h6 class="title-reset top-destination-link__title">New York (NY)</h6>
+                                <span class="title-reset top-destination-link__description">2,449 accommodations</span>
+                            </a>
+                        </li>
+                        <li class="top-destination__item">
+                            <a href="#" class="top-destination__link">
+                                <img src="./public/picture/houton.jpg" alt="">
+                                <h6 class="title-reset top-destination-link__title">Houton (TX)</h6>
+                                <span class="title-reset top-destination-link__description">1,597 accommodations</span>
+                            </a>
+                        </li>
+                        <li class="top-destination__item">
+                            <a href="#" class="top-destination__link">
+                                <img src="./public/picture/phoenix.jpg" alt="">
+                                <h6 class="title-reset top-destination-link__title">Phoenix (AZ)</h6>
+                                <span class="title-reset top-destination-link__description">2,097 accommodations</span>
+                            </a>
+                        </li>
+                        <li class="top-destination__item">
+                            <a href="#" class="top-destination__link">
+                                <img src="./public/picture/manila.jpg" alt="">
+                                <h6 class="title-reset top-destination-link__title">Manila</h6>
+                                <span class="title-reset top-destination-link__description">6,508 accommodations</span>
+                            </a>
+                        </li>
+                        <li class="top-destination__item">
+                            <a href="#" class="top-destination__link">
+                                <img src="./public/picture/singapore.jpg" alt="">
+                                <h6 class="title-reset top-destination-link__title">Singapore</h6>
+                                <span class="title-reset top-destination-link__description">1,168 accommodations</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="top-destination-manager">
+                        <div class="top-destination-manager__prev">
+                            <svg height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="sc-bqyKva ijvAbc"><path d="M8.515 12l9.192 9.192a1 1 0 1 1-1.414 1.415l-9.9-9.9a1 1 0 0 1 0-1.414l9.9-9.9a1 1 0 0 1 1.414 1.415L8.515 12z"></path></svg>
+                        </div>
+                        <div class="top-destination-manager__next">
+                            <svg height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="sc-bqyKva ijvAbc"><path d="M15.485 12L6.293 2.808a1 1 0 0 1 1.414-1.415l9.9 9.9a1 1 0 0 1 0 1.414l-9.9 9.9a1 1 0 0 1-1.414-1.415L15.485 12z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="top-link">
+                <ul class="top-link__list">
+                    <li class="top-link-list__group">
+                        <h6 class="top-link-list-group__title title-reset">Help</h6>
+                        <a href="#">Help center</a>
+                        <a href="#">FAQs</a>
+                        <a href="#">Privacy policy</a>
+                        <a href="#">Cookie policy</a>
+                        <a href="#">Terms of use</a>
+                    </li>
+                    <li class="top-link-list__group">
+                        <h6 class="top-link-list-group__title title-reset">About us</h6>
+                        <a href="#">PointMax</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Press</a>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li class="top-link-list__group">
+                        <h6 class="top-link-list-group__title title-reset">Destination</h6>
+                        <a href="#">Countries/Territories</a>
+                        <a href="#">Cities</a>
+                    </li>
+                    <li class="top-link-list__group">
+                        <h6 class="top-link-list-group__title title-reset">Partner with us</h6>
+                        <a href="#">YCS partner portal</a>
+                        <a href="#">Partner Hub</a>
+                        <a href="#">Advertise on Agoda</a>
+                        <a href="#">Affiliates</a>
+                        <a href="#">Connectivity partners</a>
+                    </li>
+                    <li class="top-link-list__group">
+                        <h6 class="top-link-list-group__title title-reset">Get the app</h6>
+                        <a href="#">iOS app</a>
+                        <a href="#">Android app</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-copyrights">
+                <div class="copyrights">
+                    <p class="copyrights-info title-reset">
+                        All material herein © 2005–2021 Agoda Company Pte. Ltd. All Rights Reserved.
+                    </p>
+                    <p class="copyrights-info title-reset">
+                        Agoda is part of Booking Holdings Inc., the world leader in online travel &amp; related services.
+                    </p>
+                    <ul class="copyrights-brands">
+                        <li class="copyrights-brand__item">
+                            <img src="./public/picture/system/mainlogo.png" alt="">
+                        </li>
+                        <li class="copyrights-brand__item">
+                            <img src="./public/picture/system/priceline.png" alt="">
+                        </li>
+                        <li class="copyrights-brand__item">
+                            <img src="./public/picture/system/kayak.png" alt="">
+                        </li>
+                        <li class="copyrights-brand__item">
+                            <img src="./public/picture/system/rentalcar.png" alt="">
+                        </li>
+                        <li class="copyrights-brand__item">
+                            <img src="./public/picture/system/booking.png" alt="">
+                        </li>
+                        <li class="copyrights-brand__item">
+                            <img src="./public/picture/system/opentable.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
