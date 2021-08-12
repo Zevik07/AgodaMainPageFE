@@ -7,13 +7,14 @@
     <title>Agoda</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./public/css/main.css">
+    <script src="public/js/main.js"></script>
 </head>
 <body>
     <div class="webapp">
         <div class="header">
             <nav class="nav">
                 <div class="logo-box">
-                    <img src="./public/picture/logo.svg" alt="" class="main-logo">
+                    <img src="./public/picture/logo.svg" alt="Main logo page" class="main-logo">
                 </div>
                 <ul class="nav__list">
                     <li class="nav-list__item">
@@ -47,16 +48,18 @@
                     </ul>
                 </div>
                 <ul class="nav__btn-group">
-                    <li class="nav-btn-group__item">
+                    <li class="nav-btn-group__item hide-on-mobile">
                         <button class="btn btn-outline-second">
                             List your place
                         </button>
                     </li>
-                    <li class="nav-btn-group__item">
+                    <li class="nav-btn-group__item hide-on-mobile">
                         <div class="select-language">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480"><defs><clipPath id="a"><path fill-opacity=".67" d="M-85.334 0h682.67v512h-682.67z"/></clipPath></defs><g fill-rule="evenodd" clip-path="url(#a)" transform="translate(80.001) scale(.9375)"><path fill="#ec0015" d="M-128 0h768v512h-768z"/><path fill="#ff0" d="M349.59 381.05l-89.576-66.893-89.137 67.55 33.152-109.77-88.973-67.784 110.08-.945 34.142-109.44 34.873 109.19 110.08.144-88.517 68.423 33.884 109.53z"/></g></svg>
-                            đ
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480"><defs><clipPath id="a"><path fill-opacity=".67" d="M-85.334 0h682.67v512h-682.67z"/></clipPath></defs><g fill-rule="evenodd" clip-path="url(#a)" transform="translate(80.001) scale(.9375)"><path fill="#ec0015" d="M-128 0h768v512h-768z"/><path fill="#ff0" d="M349.59 381.05l-89.576-66.893-89.137 67.55 33.152-109.77-88.973-67.784 110.08-.945 34.142-109.44 34.873 109.19 110.08.144-88.517 68.423 33.884 109.53z"/></g></svg>
                         </div>
+                    </li>
+                    <li class="nav-btn-group__item hide-on-mobile">
+                        <span class="language-unit-money">đ</span>
                     </li>
                     <li class="nav-btn-group__item">
                         <button class="btn btn-outline-primary btn-sigin">
@@ -68,11 +71,44 @@
                             Create account
                         </button>
                     </li>
+                    <li class="nav-btn-group__item nav__menu-btn-mobile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 5H4c-.6 0-1-.4-1-1s.4-1 1-1h16c.6 0 1 .4 1 1s-.4 1-1 1zm0 16H4c-.6 0-1-.4-1-1s.4-1 1-1h16c.6 0 1 .4 1 1s-.4 1-1 1zm0-8H4c-.6 0-1-.4-1-1s.4-1 1-1h16c.6 0 1 .4 1 1s-.4 1-1 1z"/></svg>
+                        <div class="menu-list">
+                            <div class="menu-list__setting">
+                                <h6 class="title-reset menu-list__title">
+                                    Settings
+                                </h6>
+                                <div class="menu-list__options-list">
+                                    <div class="menu-list__option">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480"><defs><clipPath id="a"><path fill-opacity=".67" d="M-85.334 0h682.67v512h-682.67z"/></clipPath></defs><g fill-rule="evenodd" clip-path="url(#a)" transform="translate(80.001) scale(.9375)"><path fill="#ec0015" d="M-128 0h768v512h-768z"/><path fill="#ff0" d="M349.59 381.05l-89.576-66.893-89.137 67.55 33.152-109.77-88.973-67.784 110.08-.945 34.142-109.44 34.873 109.19 110.08.144-88.517 68.423 33.884 109.53z"/></g></svg>
+                                        <span>Vietnam</span>
+                                    </div>
+                                    <div class="menu-list__option">
+                                        <span class="language-unit-money">đ</span>
+                                        <span class="language-unit-money-text">Vietnamese Dong</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-list__place">
+                                <h6 class="title-reset menu-list__title">
+                                    List your place on agoda
+                                </h6>
+                                <div class="menu-list__options-list">
+                                    <div class="menu-list__option earn-money">
+                                        Earn money to pay for your travel!
+                                    </div>
+                                    <div class="menu-list__option list-your-place">
+                                        List your place today
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </nav>
             <div class="special-notification">
                 <span class="special-notification__text">
-                    We know your travel plans may be impacted by COVID-19. Check local travel restrictions prior to booking your trip. 
+                    We know your travel plans may be impacted by COVID-19. Check local travel restrictions prior to booking your trip.
                 </span>
                 <a class="special-notification__link">
                     Learn more
@@ -94,7 +130,7 @@
                             </li>
                             <li class="switch-item">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="sc-bqyKva eJRIwi"><path fill-rule="evenodd" d="M12 2c5.523 0 10 4.477 10 10 0 5.43-4.327 9.848-9.72 9.996L12 22a10 10 0 0 1-9-5.637l-.08-.169A9.963 9.963 0 0 1 2 12C2 6.477 6.477 2 12 2zm-.5 12h-3v4h3v-4zm4 0h-3v4h3v-4zm-4-5c-1.624.274-2.84 1.632-2.985 3.272l-.012.19L8.5 13h3V9zm1 0v4h3v-.508l-.01-.193c-.129-1.593-1.265-2.917-2.796-3.261L12.5 9zM12 3.5a8.5 8.5 0 0 0-8.485 9.014L12 4.5l8.485 8.013A8.5 8.5 0 0 0 12 3.5z"></path></svg>
-                                <h6 class="switch-item__title">Private stays</h6>
+                                <h6 class="switch-item__title">Homes & Apts</h6>
                             </li>
                             <li class="switch-item">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="sc-bqyKva eJRIwi"><path fill-rule="evenodd" d="M10 13v9.023H2V14a1 1 0 0 1 1-1h7zm11.5-3a.5.5 0 0 1 .5.5V22H11V10.5a.5.5 0 0 1 .5-.5h10zM8 18H4v1h4v-1zm8-2h-2v2h1.01v-1H16v-1zm3 0h-2v2h1.01v-1H19v-1zM8 15H4v.954h4V15zm8-2h-2v2h1.01v-1H16v-1zm3 0h-2v2h1.01v-1H19v-1zM8.127 1.301a2 2 0 0 1 1.61.106l4.94 2.576 3.726-1.357a1.19 1.19 0 1 1 .814 2.236L8.473 8.772a2 2 0 0 1-2.25-.635L4 5.337l.485-.177a2 2 0 0 1 1.868.267l1.442 1.06L10.95 5.34 7.085 1.681z"></path></svg>
@@ -154,7 +190,7 @@
         </div>
         <div class="body">>
             <div class="top-destination">
-                <h3 class="title-reset body-title">
+                <h3 class="top-destination__title title-reset body-title">
                     Top destinations in Vietnam
                 </h3>
                 <div class="top-destination__body">
@@ -231,42 +267,44 @@
                     Explore more travel vacation rentals
                 </h3>
                 <ul class="top-vacation__list">
-                    <li class="top-vacation__item">
-                        <a href="" class="top-vacation__link">
-                            <img src="./public/picture/apartment.jpg" alt="">
-                            <div class="top-vacation-link__content">
-                                <h6 class="top-vacation-link__title title-reset">Apartments</h6>
-                                <p class="top-vacation-link__description">156,786 properties</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="top-vacation__item">
-                        <a href="" class="top-vacation__link">
-                            <img src="./public/picture/vacation.jpg" alt="">
-                            <div class="top-vacation-link__content">
-                                <h6 class="top-vacation-link__title title-reset">Vacation Rentals</h6>
-                                <p class="top-vacation-link__description">517,703 properties</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="top-vacation__item">
-                        <a href="" class="top-vacation__link">
-                            <img src="./public/picture/entire-villa.jpg" alt="">
-                            <div class="top-vacation-link__content">
-                                <h6 class="top-vacation-link__title title-reset">Private Villas</h6>
-                                <p class="top-vacation-link__description">181,167 properties</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="top-vacation__item">
-                        <a href="" class="top-vacation__link">
-                            <img src="./public/picture/entire-bungalow.jpg" alt="">
-                            <div class="top-vacation-link__content">
-                                <h6 class="top-vacation-link__title title-reset">Bungalows</h6>
-                                <p class="top-vacation-link__description">8,801 properties</p>
-                            </div>
-                        </a>
-                    </li>
+                    <div class="row">
+                        <li class="top-vacation__item col-3">
+                            <a href="" class="top-vacation__link">
+                                <img src="./public/picture/apartment.jpg" alt="">
+                                <div class="top-vacation-link__content">
+                                    <h6 class="top-vacation-link__title title-reset">Apartments</h6>
+                                    <p class="top-vacation-link__description">156,786 properties</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="top-vacation__item col-3">
+                            <a href="" class="top-vacation__link">
+                                <img src="./public/picture/vacation.jpg" alt="">
+                                <div class="top-vacation-link__content">
+                                    <h6 class="top-vacation-link__title title-reset">Vacation Rentals</h6>
+                                    <p class="top-vacation-link__description">517,703 properties</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="top-vacation__item col-3">
+                            <a href="" class="top-vacation__link">
+                                <img src="./public/picture/entire-villa.jpg" alt="">
+                                <div class="top-vacation-link__content">
+                                    <h6 class="top-vacation-link__title title-reset">Private Villas</h6>
+                                    <p class="top-vacation-link__description">181,167 properties</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="top-vacation__item col-3">
+                            <a href="" class="top-vacation__link">
+                                <img src="./public/picture/entire-bungalow.jpg" alt="">
+                                <div class="top-vacation-link__content">
+                                    <h6 class="top-vacation-link__title title-reset">Bungalows</h6>
+                                    <p class="top-vacation-link__description">8,801 properties</p>
+                                </div>
+                            </a>
+                        </li>
+                    </div>
                 </ul>
             </div>
             <div class="top-recommend">
@@ -280,157 +318,159 @@
                     <li class="top-recommend-nav__item">Da Nang</li>
                     <li class="top-recommend-nav__item">Phu Quoc Island</li>
                 </ul>
-                <ul class="top-recommend__list row">
-                    <li class="top-recommend-list__item col-3">
-                        <a href="#" class="recommend-link">
-                            <img src="./public/picture/home.jpg" alt="" class="recommend-link__img">
-                            <h6 class="recommend-link__title title-reset">A-Homes Green Bay Luxury Apartment 1.3</h6>
-                            <span class="recommend-link__star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </span>
-                            <p class="recommend-link__address">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span class="">
-                                    Quan Cau Giay, Ha Noi
+                <ul class="top-recommend__list">
+                    <div class="row">
+                        <li class="top-recommend-list__item col-3">
+                            <a href="#" class="recommend-link">
+                                <img src="./public/picture/home.jpg" alt="" class="recommend-link__img">
+                                <h6 class="recommend-link__title title-reset">A-Homes Green Bay Luxury Apartment 1.3</h6>
+                                <span class="recommend-link__star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </span>
-                            </p>
-                            <div class="recommend-link__status">
-                                <span class="">Price per night as low as</span>
-                            </div>
-                            <div class="recommend-link__price">
-                                <span class="">VND 478,595</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="top-recommend-list__item col-3">
-                        <a href="#" class="recommend-link">
-                            <img src="./public/picture/home2.jpg" alt="" class="recommend-link__img">
-                            <h6 class="recommend-link__title title-reset">A-Homes Green Bay Luxury Apartment 1.3</h6>
-                            <span class="recommend-link__star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </span>
-                            <p class="recommend-link__address">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span class="">
-                                    Quan Cau Giay, Ha Noi
+                                <p class="recommend-link__address">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span class="">
+                                        Quan Cau Giay, Ha Noi
+                                    </span>
+                                </p>
+                                <div class="recommend-link__status">
+                                    <span class="">Price per night as low as</span>
+                                </div>
+                                <div class="recommend-link__price">
+                                    <span class="">VND 478,595</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="top-recommend-list__item col-3">
+                            <a href="#" class="recommend-link">
+                                <img src="./public/picture/home2.jpg" alt="" class="recommend-link__img">
+                                <h6 class="recommend-link__title title-reset">A-Homes Green Bay Luxury Apartment 1.3</h6>
+                                <span class="recommend-link__star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </span>
-                            </p>
-                            <div class="recommend-link__status">
-                                <span class="">Price per night as low as</span>
-                            </div>
-                            <div class="recommend-link__price">
-                                <span class="">VND 478,595</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="top-recommend-list__item col-3">
-                        <a href="#" class="recommend-link">
-                            <img src="./public/picture/home3.jpg" alt="" class="recommend-link__img">
-                            <h6 class="recommend-link__title title-reset">A-Homes Green Bay Luxury Apartment 1.3</h6>
-                            <span class="recommend-link__star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </span>
-                            <p class="recommend-link__address">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span class="">
-                                    Quan Cau Giay, Ha Noi
+                                <p class="recommend-link__address">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span class="">
+                                        Quan Cau Giay, Ha Noi
+                                    </span>
+                                </p>
+                                <div class="recommend-link__status">
+                                    <span class="">Price per night as low as</span>
+                                </div>
+                                <div class="recommend-link__price">
+                                    <span class="">VND 478,595</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="top-recommend-list__item col-3">
+                            <a href="#" class="recommend-link">
+                                <img src="./public/picture/home3.jpg" alt="" class="recommend-link__img">
+                                <h6 class="recommend-link__title title-reset">A-Homes Green Bay Luxury Apartment 1.3</h6>
+                                <span class="recommend-link__star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </span>
-                            </p>
-                            <div class="recommend-link__status">
-                                <span class="">Price per night as low as</span>
-                            </div>
-                            <div class="recommend-link__price">
-                                <span class="">VND 478,595</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="top-recommend-list__item col-3">
-                        <a href="#" class="recommend-link">
-                            <img src="./public/picture/home4.jpg" alt="" class="recommend-link__img">
-                            <h6 class="recommend-link__title title-reset">A-Homes Green Bay Luxury Apartment 1.3</h6>
-                            <span class="recommend-link__star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </span>
-                            <p class="recommend-link__address">
-                                <i class="fas fa-map-marker-alt"> </i>
-                                <span class="">
-                                    Quan Cau Giay, Ha Noi
+                                <p class="recommend-link__address">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span class="">
+                                        Quan Cau Giay, Ha Noi
+                                    </span>
+                                </p>
+                                <div class="recommend-link__status">
+                                    <span class="">Price per night as low as</span>
+                                </div>
+                                <div class="recommend-link__price">
+                                    <span class="">VND 478,595</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="top-recommend-list__item col-3">
+                            <a href="#" class="recommend-link">
+                                <img src="./public/picture/home4.jpg" alt="" class="recommend-link__img">
+                                <h6 class="recommend-link__title title-reset">A-Homes Green Bay Luxury Apartment 1.3</h6>
+                                <span class="recommend-link__star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </span>
-                            </p>
-                            <div class="recommend-link__status">
-                                <span class="">Price per night as low as</span>
-                            </div>
-                            <div class="recommend-link__price">
-                                <span class="">VND 478,595</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="top-recommend-list__item col-3">
-                        <a href="#" class="recommend-link">
-                            <img src="./public/picture/home4.jpg" alt="" class="recommend-link__img">
-                            <h6 class="recommend-link__title title-reset">A-Homes Green Bay Luxury Apartment 1.3</h6>
-                            <span class="recommend-link__star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </span>
-                            <p class="recommend-link__address">
-                                <i class="fas fa-map-marker-alt"> </i>
-                                <span class="">
-                                    Quan Cau Giay, Ha Noi
+                                <p class="recommend-link__address">
+                                    <i class="fas fa-map-marker-alt"> </i>
+                                    <span class="">
+                                        Quan Cau Giay, Ha Noi
+                                    </span>
+                                </p>
+                                <div class="recommend-link__status">
+                                    <span class="">Price per night as low as</span>
+                                </div>
+                                <div class="recommend-link__price">
+                                    <span class="">VND 478,595</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="top-recommend-list__item col-3">
+                            <a href="#" class="recommend-link">
+                                <img src="./public/picture/home4.jpg" alt="" class="recommend-link__img">
+                                <h6 class="recommend-link__title title-reset">A-Homes Green Bay Luxury Apartment 1.3</h6>
+                                <span class="recommend-link__star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </span>
-                            </p>
-                            <div class="recommend-link__status">
-                                <span class="">Price per night as low as</span>
-                            </div>
-                            <div class="recommend-link__price">
-                                <span class="">VND 478,595</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="top-recommend-list__item col-3">
-                        <a href="#" class="recommend-link">
-                            <img src="./public/picture/home4.jpg" alt="" class="recommend-link__img">
-                            <h6 class="recommend-link__title title-reset">A-Homes Green Bay Luxury Apartment 1.3</h6>
-                            <span class="recommend-link__star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </span>
-                            <p class="recommend-link__address">
-                                <i class="fas fa-map-marker-alt"> </i>
-                                <span class="">
-                                    Quan Cau Giay, Ha Noi
+                                <p class="recommend-link__address">
+                                    <i class="fas fa-map-marker-alt"> </i>
+                                    <span class="">
+                                        Quan Cau Giay, Ha Noi
+                                    </span>
+                                </p>
+                                <div class="recommend-link__status">
+                                    <span class="">Price per night as low as</span>
+                                </div>
+                                <div class="recommend-link__price">
+                                    <span class="">VND 478,595</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="top-recommend-list__item col-3">
+                            <a href="#" class="recommend-link">
+                                <img src="./public/picture/home4.jpg" alt="" class="recommend-link__img">
+                                <h6 class="recommend-link__title title-reset">A-Homes Green Bay Luxury Apartment 1.3</h6>
+                                <span class="recommend-link__star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </span>
-                            </p>
-                            <div class="recommend-link__status">
-                                <span class="">Price per night as low as</span>
-                            </div>
-                            <div class="recommend-link__price">
-                                <span class="">VND 478,595</span>
-                            </div>
-                        </a>
-                    </li>
+                                <p class="recommend-link__address">
+                                    <i class="fas fa-map-marker-alt"> </i>
+                                    <span class="">
+                                        Quan Cau Giay, Ha Noi
+                                    </span>
+                                </p>
+                                <div class="recommend-link__status">
+                                    <span class="">Price per night as low as</span>
+                                </div>
+                                <div class="recommend-link__price">
+                                    <span class="">VND 478,595</span>
+                                </div>
+                            </a>
+                        </li>
+                    </div>
                 </ul>
                 <div class="top-recommend__more">
                     <button class="top-feedback-more__button btn btn-outline-primary">
@@ -485,9 +525,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="top-destination">
-                <h3 class="title-reset body-title">
-                    Top destinations outside Vietnam
+            <div class="top-destination top-destination--outside">
+                <h3 class="top-destination__title title-reset body-title">
+                    Popular destinations outside Vietnam
                 </h3>
                 <div class="top-destination__body">
                     <ul class="top-destination__list">

@@ -1,0 +1,302 @@
+/* Responsive */
+@media (max-width: 1281px) {
+    .welcome-msg{
+        padding-bottom: 32px;
+    }
+    .search-box{
+        &__content{
+            padding: 3% 0;
+            max-width: 900px;
+            .icon-search-box{
+                width: 20px;
+                height: 21px;
+            }
+            .switch-box{
+                .switch-list{
+                    padding: 0 32px;
+                    max-width: 844px;
+                }
+                
+            }
+        }
+    }
+    .body{
+        .top-destination{
+            max-width: 800px;
+            padding: 0;
+            &__body{
+                .top-destination__list{
+                    .top-destination__item{
+                        min-width: 360px;
+                    }
+                }
+            }
+        }
+        .top-feedback{
+            margin: 5em 14.5% 9em;
+            &__list{
+                .top-feedback-list__item{
+                    width: 100%;
+                    .top-feedback-list__comment{
+                        min-height: 0;
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        .top-link{
+            &__list{
+                max-width: 972px;
+            }
+        }
+        .footer-copyrights{
+            .copyrights{
+                max-width: 972px;
+            }
+        }
+    }
+}
+@media (max-width: 1123px) {
+    .nav{
+        .nav__btn-group{
+            .nav__menu-btn-mobile{
+                display: block;
+            }
+            .hide-on-mobile{
+                display: none;
+            }
+        }
+    }
+    .footer{
+        .top-link{
+            &__list{
+                max-width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 932px){
+    .nav{
+        &__list{
+            display: none;
+        }
+        &__ellipsis{
+            display: none;
+        }
+    }     
+    .search-box{
+        &__content{
+            .switch-box{
+                .switch-list{
+                    max-width: 700px;
+                    padding: 0 16px;
+                    .switch-item{
+                        svg{
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                }
+            }
+        }
+        .search-box__main{
+            max-width: 752px;
+            .search-box__options{
+                flex-direction: column;
+                height: auto;
+                .room-option{
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+    .body{
+        .top-destination{
+            max-width: 600px;
+            padding: 0;
+            &__body{
+                .top-destination__list{
+                    .top-destination__item{
+                        min-width: 260px;
+                    }
+                }
+            }
+        }
+        .top-feedback{
+            margin: 2em 7.5% 4em;
+            &__list{
+                .top-feedback-list__item{
+                    width: 100%;
+                    .top-feedback-list__comment{
+                        min-height: 0;
+                    }
+                }
+            }
+        }
+        .top-vacation{
+            .top-vacation__item{
+                width: 50%;
+            }
+        }
+        .top-recommend{
+            &__list{
+                .top-recommend-list__item{
+                    width: 50%;
+                    .recommend-link{
+                        &__img{
+                            height: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        .footer-copyrights{
+            .copyrights{
+                .copyrights-brands{
+                    .copyrights-brand__item{
+                        max-width: 70px;
+                    }
+                }
+            }
+        }
+    }  
+}
+@media (max-width: 632px)
+{
+    .nav{
+        .logo-box{
+            width: 50px;
+            .main-logo{
+                width: 100%;
+            }
+        }
+        &__btn-group{
+            .nav-btn-group__item{
+                margin-left: 12px;
+                .btn{
+                    padding: 6px 10px;
+                    border-radius: 2px;
+                }
+            }
+            .nav__menu-btn-mobile{
+                .menu-list{
+                    min-width: 200px;
+                }
+            }
+        }
+    }
+    .special-notification{
+        &__text{
+            font-size: 1.4rem;
+        }
+    }
+    .welcome-msg{
+        padding-bottom: 12px;
+        &__title{
+            margin-bottom: 4px;
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        &__description{
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+    }
+    .search-box{
+        &__content{
+            .switch-box{
+                .switch-list{
+                    max-width: 500px;
+                    padding: 0 8px;
+                    .switch-item{
+                        padding-top: 8x;
+                        margin: 0 4px;
+                        &__title{
+                            font-size: 1.3rem;
+                        }
+                        svg{
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                }
+            }
+        }
+        .search-box__main{
+            padding: 16px;
+            .search-box__options{
+                 flex-direction: column;
+             }
+            .search-box__submitbox{
+                .search-box-submitbox__btn{
+                    max-width: 270px;
+                    height: 52px;
+                    font-size: 1.7rem;
+                }
+            }
+         }
+    }
+    .body{
+        .top-destination{
+            max-width: 320px;
+            padding: 0;
+            &__body{
+                .top-destination__list{
+                    .top-destination__item{
+                        min-width: 240px;
+                    }
+                }
+            }
+        }
+        .top-feedback{
+            margin: 2em 7.5% 4em;
+            &__title{
+                font-size: 2.8rem;
+            }
+        }
+        .top-vacation{
+            .top-vacation__item{
+                width: 100%;
+            }
+        }
+        .top-recommend{
+            &__nav{
+                .top-recommend-nav__item:nth-last-child(-n+2){
+                    display: none;
+                }
+            }
+            &__list{
+                .top-recommend-list__item{
+                    width: 100%;
+                    .recommend-link{
+                        &__img{
+                            height: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        .top-link{
+            &__list{
+                flex-direction: column;
+                padding: 0 64px;
+            }
+        }
+        .footer-copyrights{
+            .copyrights{
+                .copyrights-brands{
+                    display: none;
+                }
+            }
+        }
+    } 
+}
