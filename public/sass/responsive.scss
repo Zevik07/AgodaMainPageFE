@@ -58,6 +58,9 @@
     }
 }
 @media (max-width: 1123px) {
+    .nav-scroll{
+        display: none;
+    }
     .nav{
         .nav__btn-group{
             .nav__menu-btn-mobile{
@@ -251,6 +254,11 @@
                 .top-destination__list{
                     .top-destination__item{
                         min-width: 240px;
+                    }
+                }
+                .top-destination-manager {
+                    &__prev, &__next{
+                        display: none;
                     }
                 }
             }

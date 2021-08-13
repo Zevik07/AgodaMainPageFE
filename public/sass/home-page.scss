@@ -277,13 +277,7 @@
                 }
             }
         }
-        .icon-search-box{
-            box-sizing: content-box;
-            padding: 12px 16px 12px 14px;
-            width: 27px;
-            height: 28px;
-            object-fit: cover;
-        }
+        
         .search-box__main{
             position: relative;
             margin: auto;
@@ -381,6 +375,124 @@
     }
 
 }
+.icon-search-box{
+    box-sizing: content-box;
+    padding: 12px 16px 12px 14px;
+    width: 27px;
+    height: 28px;
+    object-fit: cover;
+}
+.nav-scroll{
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    height: 0px;
+    font-size: 1.6rem;
+    background-color: rgb(32, 39, 77);
+    color: $text-color;
+
+    -moz-transition: opacity 0.4s ease-in-out;
+    -o-transition: opacity 0.4s ease-in-out;
+    -webkit-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+    
+    &__content{
+        min-width: 1100px;
+        height: 46px;
+        margin: auto;
+        display: flex;
+        .nav-scroll__inputbox{
+            min-width: 361px;
+            display: flex;
+            align-items: center;
+            margin-right: 5px;
+            background-color: $white;
+            height: 100%;
+            border-radius: 6px;
+            img{
+                padding-right: 8px;
+            }
+            input{
+                flex: 1;
+                border: 0;
+                outline: none;
+                border-radius: 6px;
+            }
+        }
+        .nav-scroll__options{
+            flex: 1;
+            display: flex;
+            margin-right: 5px;
+            font-size: 1.3rem;
+            .date-option, .room-option{
+                display: flex;
+                background-color: $white;
+                border-radius: $border-radius;
+                border: $border-light;
+                border-radius: 6px;
+                &__item{
+                    flex: 1;
+                    margin: 0 10px;
+                    display: flex;
+                    align-items: center;
+                    .option-body{
+                        flex: 1;
+                        padding: 5px 0;
+                        letter-spacing: 0.5px;
+                        .text{
+                            line-height: 1.5rem;
+                            font-weight: 700;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
+                        .textsub{
+                            line-height: 1.5rem;
+                            color: $text-color-light;
+                        }
+                    }
+                }
+            }
+            .date-option{
+                width: 60%;
+                &__item:first-of-type{
+                    border-right: $border-light;
+                }
+            }
+            .room-option{
+                width: 40%;
+                margin-left: 12px;
+                &__item{
+                    .icon-search-box{
+                        &.dropdown{
+                            width: 12px;
+                            height: 13px;
+                        }
+                    }
+                }
+            }
+        }
+        .nav-scroll__btn-submit{
+            min-width: 130px;
+            background: $blue;
+            color: $white;
+            border-radius: 3px;
+        }
+    }
+}
+.nav-scroll-show{
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 1;
+    height: 70px;
+}
+.sticky {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}  
 .body{
     font-size: 1.6rem;
     color: $text-color;
@@ -403,6 +515,7 @@
             .top-destination__list{
                 display: flex;
                 overflow-x: scroll;
+                scroll-behavior: smooth;
                 &::-webkit-scrollbar {
                     width: 0;
                     background: transparent;
@@ -459,7 +572,7 @@
             }
             .top-destination-manager {
                 &__prev, &__next{
-                    display: flex;;
+                    display: flex;
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);

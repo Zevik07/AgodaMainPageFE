@@ -852,13 +852,6 @@ a {
 .search-box__content .switch-box .switch-list .switch-item.active svg path {
   fill: #5392f9;
 }
-.search-box__content .icon-search-box {
-  box-sizing: content-box;
-  padding: 12px 16px 12px 14px;
-  width: 27px;
-  height: 28px;
-  object-fit: cover;
-}
 .search-box__content .search-box__main {
   position: relative;
   margin: auto;
@@ -950,6 +943,122 @@ a {
   transition: all 0.15s ease-in-out 0s;
 }
 
+.icon-search-box {
+  box-sizing: content-box;
+  padding: 12px 16px 12px 14px;
+  width: 27px;
+  height: 28px;
+  object-fit: cover;
+}
+
+.nav-scroll {
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  height: 0px;
+  font-size: 1.6rem;
+  background-color: #20274d;
+  color: #444;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+.nav-scroll__content {
+  min-width: 1100px;
+  height: 46px;
+  margin: auto;
+  display: flex;
+}
+.nav-scroll__content .nav-scroll__inputbox {
+  min-width: 361px;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  background-color: #fff;
+  height: 100%;
+  border-radius: 6px;
+}
+.nav-scroll__content .nav-scroll__inputbox img {
+  padding-right: 8px;
+}
+.nav-scroll__content .nav-scroll__inputbox input {
+  flex: 1;
+  border: 0;
+  outline: none;
+  border-radius: 6px;
+}
+.nav-scroll__content .nav-scroll__options {
+  flex: 1;
+  display: flex;
+  margin-right: 5px;
+  font-size: 1.3rem;
+}
+.nav-scroll__content .nav-scroll__options .date-option, .nav-scroll__content .nav-scroll__options .room-option {
+  display: flex;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+}
+.nav-scroll__content .nav-scroll__options .date-option__item, .nav-scroll__content .nav-scroll__options .room-option__item {
+  flex: 1;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+}
+.nav-scroll__content .nav-scroll__options .date-option__item .option-body, .nav-scroll__content .nav-scroll__options .room-option__item .option-body {
+  flex: 1;
+  padding: 5px 0;
+  letter-spacing: 0.5px;
+}
+.nav-scroll__content .nav-scroll__options .date-option__item .option-body .text, .nav-scroll__content .nav-scroll__options .room-option__item .option-body .text {
+  line-height: 1.5rem;
+  font-weight: 700;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.nav-scroll__content .nav-scroll__options .date-option__item .option-body .textsub, .nav-scroll__content .nav-scroll__options .room-option__item .option-body .textsub {
+  line-height: 1.5rem;
+  color: #777;
+}
+.nav-scroll__content .nav-scroll__options .date-option {
+  width: 60%;
+}
+.nav-scroll__content .nav-scroll__options .date-option__item:first-of-type {
+  border-right: 1px solid #dee2e6;
+}
+.nav-scroll__content .nav-scroll__options .room-option {
+  width: 40%;
+  margin-left: 12px;
+}
+.nav-scroll__content .nav-scroll__options .room-option__item .icon-search-box.dropdown {
+  width: 12px;
+  height: 13px;
+}
+.nav-scroll__content .nav-scroll__btn-submit {
+  min-width: 130px;
+  background: #5392f9;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.nav-scroll-show {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 1;
+  height: 70px;
+}
+
+.sticky {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .body {
   font-size: 1.6rem;
   color: #444;
@@ -975,6 +1084,7 @@ a {
 .body .top-destination__body .top-destination__list {
   display: flex;
   overflow-x: scroll;
+  scroll-behavior: smooth;
   /* Optional: show position indicator in red */
 }
 .body .top-destination__body .top-destination__list::-webkit-scrollbar {
@@ -1321,6 +1431,10 @@ a {
   }
 }
 @media (max-width: 1123px) {
+  .nav-scroll {
+    display: none;
+  }
+
   .nav .nav__btn-group .nav__menu-btn-mobile {
     display: block;
   }
@@ -1461,6 +1575,9 @@ a {
   }
   .body .top-destination__body .top-destination__list .top-destination__item {
     min-width: 240px;
+  }
+  .body .top-destination__body .top-destination-manager__prev, .body .top-destination__body .top-destination-manager__next {
+    display: none;
   }
   .body .top-feedback {
     margin: 2em 7.5% 4em;

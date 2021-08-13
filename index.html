@@ -7,7 +7,6 @@
     <title>Agoda</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./public/css/main.css">
-    <script src="public/js/main.js"></script>
 </head>
 <body>
     <div class="webapp">
@@ -114,7 +113,46 @@
                     Learn more
                 </a>
             </div>
-            <div class="search-box">
+            <nav id="nav-scroll" class="nav-scroll">
+                <div class="nav-scroll__content">
+                    <div class="nav-scroll__inputbox">
+                        <img class="icon-search-box" src="./public/picture/system/search.JPG" alt="">
+                        <input type="text" placeholder="Enter a destination or property">
+                    </div>
+                    <div class="nav-scroll__options">
+                        <div class="date-option">
+                            <div class="date-option__item">
+                                <img class="icon-search-box" src="./public/picture/system/callender.JPG" alt="">
+                                <div class="option-body">
+                                    <h6 class="text title-reset">16 Aug 2021</h6>
+                                    <p class="textsub title-reset">Monday</p>
+                                </div>  
+                            </div>
+                            <div class="date-option__item">
+                                <img class="icon-search-box" src="./public/picture/system/callender.JPG" alt="">    
+                                <div class="option-body">
+                                    <h6 class="text title-reset">16 Aug 2021</h6>
+                                    <p class="textsub title-reset">Monday</p>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="room-option">
+                            <div class="room-option__item">
+                                <img class="icon-search-box" src="./public/picture/system/people.JPG" alt="">    
+                                <div class="option-body">
+                                    <h6 class="text title-reset">1 Adult</h6>
+                                    <p class="textsub title-reset">1 room</p>
+                                </div>  
+                                <img class="icon-search-box dropdown" src="./public/picture/system/drop-down.JPG" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="nav-scroll__btn-submit btn btn-outline-primary">
+                        SEARCH
+                    </button>
+                </div>
+            </nav>
+            <div id="search-box" class="search-box">
                 <div class="search-box__background">
                 </div>
                 <div class="search-box__content">
@@ -683,5 +721,6 @@
             </div>
         </div>
     </div>
+    <script src="public/js/main.js"></script>
 </body>
 </html>
